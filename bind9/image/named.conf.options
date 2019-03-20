@@ -1,0 +1,37 @@
+options {
+
+	version "[null]";
+
+	pid-file "/run/bind/named.pid";
+	directory "/var/bind";
+	session-keyfile "/var/bind/session.key";
+
+	auth-nxdomain no;
+	recursion yes;
+	allow-transfer {
+		none;
+	};
+	allow-recursion {
+		192.168.178.0/24;
+	};
+
+	cleaning-interval 300;
+	interface-interval 30;
+
+	listen-on port 53 {
+		any;
+	};
+	
+	listen-on-v6 port 53 {
+		any;
+	};
+
+	forwarders {
+		192.168.178.1;
+		80.69.100.174;
+		80.69.100.198;
+		208.67.222.222;
+		208.67.220.220;
+	};
+
+};

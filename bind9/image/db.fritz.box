@@ -1,0 +1,66 @@
+$ORIGIN	fritz.box.
+$TTL	2D
+
+@		IN	SOA		aquilo	root.fritz.box. (
+			2019020501
+			1D
+			2H
+			1W
+			1H 
+)
+
+			NS	aquilo
+			NS	breeze
+			NS	harmattan
+			NS	fritz.box.
+			A	192.168.178.1
+
+_ldap._tcp.fritz.box	86400	IN	SRV	10	3	389	aquilo
+_ldap._tcp.fritz.box	86400	IN	SRV	10	2	389	breeze
+_ldap._tcp.fritz.box	86400	IN	SRV	10	2	389	harmattan
+
+netgear			IN	A	192.168.178.20
+brubu			IN	A		192.168.178.21
+				AAAA		fd1d:8fa3:34ba:a::6
+puppet			CNAME		brubu
+
+breeze			IN	A		192.168.178.23
+				AAAA		fd1d:8fa3:34ba:a::1
+harmattan		IN	A		192.168.178.24
+				AAAA		fd1d:8fa3:34ba:a::3
+berat			IN	A	192.168.178.25
+wiphone			IN	A	192.168.178.26
+NPI6BA009		IN	A	192.168.178.28
+flurry			IN	A	192.168.178.29
+ankh			IN	A	192.168.178.30
+mail			CNAME	ankh
+SynoNAS211		IN	A	192.168.178.31
+nas				CNAME	SynoNAS211
+elvegust		IN	A	192.168.178.32
+aquilo			IN	A		192.168.178.33
+				AAAA		fd1d:8fa3:34ba:a::2
+declips			IN	A		192.168.178.34
+				AAAA		fd1d:8fa3:34ba:a::4
+wpad			CNAME		declips
+proxy			CNAME		declips
+oetesien		IN	A		192.168.178.35
+				AAAA		fd1d:8fa3:34ba:a::7
+chinook			IN	A		192.168.178.36
+				AAAA		fd1d:8fa3:34ba:a::9
+debemcc			IN	A	192.168.178.37
+
+oelvegust		IN	A	192.168.178.39
+vdeclips		IN	A	192.168.178.40
+wipad			IN	A	192.168.178.43
+airport			IN	A	192.168.178.45
+echoplus		IN	A	192.168.178.46
+alexa			CNAME	echoplus
+calima			IN	A		192.168.178.48
+				AAAA		fd1d:8fa3:34ba:a::5
+
+PanasonicTV		IN	A	192.168.178.62
+uiphone			IN	A	192.168.178.69
+homematic-ccu2		IN	A	192.168.178.70
+dezpjwschaly		IN	A	192.168.178.73
+debdock			IN	A		192.168.178.74
+				AAAA		fd1d:8fa3:34ba:a::8

@@ -1,0 +1,43 @@
+$TTL	2D
+178.168.192.in-addr.arpa.	IN	SOA		aquilo.fritz.box.	root.fritz.box. (
+			2019020501
+			1D
+			2H
+			1W
+			1H
+)
+
+			NS	aquilo.fritz.box.
+			NS	breeze.fritz.box.
+			NS	fritz.box.
+			A	192.168.178.1
+
+20		PTR		netgear.fritz.box.
+21		PTR		brubu.fritz.box.
+
+23		PTR		breeze.fritz.box.
+24		PTR		harmattan.fritz.box.
+25		PTR		berat.fritz.box.
+26		PTR		wiphone.fritz.box.
+28		PTR		NPI6BA009.fritz.box.
+29		PTR		flurry.fritz.box.
+30		PTR		ankh.fritz.box.
+31		PTR		SynoNAS211.fritz.box.
+32		PTR		elvegust.fritz.box.
+33		PTR		aquilo.fritz.box.
+34		PTR		declips.fritz.box.
+35		PTR		oetesien.fritz.box.
+36		PTR		chinook.fritz.box.
+37		PTR		debemcc.fritz.box.
+
+39		PTR		oelvegust.fritz.box.
+40		PTR		vdeclips.fritz.box.
+43		PTR		wipad.fritz.box.
+45		PTR		airport.fritz.box.
+46		PTR		echoplus.fritz.box.
+48		PTR		calima.fritz.box.
+
+62		PTR		panasonictv.fritz.box.
+70		PTR		homematic-ccu2.fritz.box.
+73		PTR		dezpjwschaly.fritz.box.
+74		PTR		debdock.fritz.box.

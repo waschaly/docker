@@ -1,0 +1,15 @@
+zone "fritz.box" {
+	type master;
+	file "/etc/bind/zone/fritz.box.zone";
+	// allow-update {
+	//	none;
+	// };
+};
+
+// zone "178.168.192.in-addr.arpa." {
+	// type master;
+	// file "/etc/bind/zone/178.168.192.in-addr.arpa.zone";
+	// allow-update {
+	//	none;
+	// };
+// };

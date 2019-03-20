@@ -1,0 +1,57 @@
+#!/bin/bash 
+#
+
+DOCKER=docker
+EXPOSE="-p 53:53/tcp -p 53:53/udp"
+IMAGE=waschaly/bind9:0.0.2
+DEVICE="/volumes/bind9"
+
+DEBUG="N"
+ENTRYPOINT="Y"
+MOUNT="N"
+
+while getopts 'ev' OPTION
+do
+	case ${OPTION} in
+
+	e)
+		ENTRYPOINT="N"
+		;;
+
+	V)
+		MOUNT="Y"
+		;;
+
+	v)
+		DEBUG="Y"
+		;;
+
+	esac
+
+done
+
+###
+##
+# DEBUG wird eingeschaltet 
+##
+###
+
+if [ ${DEBUG} = "Y" ]
+then
+	set -xv
+fi
+
+
+###
+##
+# Mit /entrypoint oder ohne 
+# DEFAULT :: ENTRYPOINT = "Y" 
+##
+###
+
+if [ ${ENTRYPOINT} = "Y" ]
+then
+	${DOCKER} run -itd ${EXPOSE} -v ${DEVICE}:/mnt -h named --name named ${IMAGE}
+else
+	${DOCKER} run -it ${EXPOSE} --entrypoint '/bin/bash' -v ${DEVICE}:/mnt -h named --name named ${IMAGE}
+fi
